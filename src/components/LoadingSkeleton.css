@@ -1,0 +1,126 @@
+.skeleton-article,
+.skeleton-video {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.dark-mode .skeleton-article,
+.dark-mode .skeleton-video {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.skeleton-image,
+.skeleton-thumbnail {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark-mode .skeleton-image,
+.dark-mode .skeleton-thumbnail {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+}
+
+.skeleton-content {
+  padding: 1rem;
+}
+
+.skeleton-line {
+  height: 1rem;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark-mode .skeleton-line {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+}
+
+.skeleton-title {
+  height: 1.25rem;
+  width: 80%;
+}
+
+.skeleton-meta {
+  height: 0.875rem;
+  width: 60%;
+}
+
+.skeleton-short {
+  width: 40%;
+}
+
+.skeleton-stat {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.dark-mode .skeleton-stat {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.skeleton-value {
+  height: 2rem;
+  width: 50%;
+  margin: 1rem 0;
+}
+
+.skeleton-chart {
+  height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark-mode .skeleton-chart {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+}
+
+.skeleton-map {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark-mode .skeleton-map {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
