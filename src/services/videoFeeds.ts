@@ -2,7 +2,25 @@ import axios from 'axios';
 import type { Video } from '../types';
 import { subDays } from 'date-fns';
 
-// CORS proxy to fetch YouTube RSS feeds
+/**
+ * Video Feeds Service
+ * 
+ * Current Implementation: YouTube RSS Feeds (Free, no API key required)
+ * - Uses YouTube RSS search feeds via CORS proxy
+ * - Completely free with no quotas
+ * - Limited metadata compared to official API
+ * 
+ * Optional Upgrade: YouTube Data API v3
+ * - Free tier: 10,000 units/day quota
+ * - Requires API key from Google Cloud Console
+ * - Better metadata: view counts, likes, comments, channel info
+ * - More reliable search results
+ * - Setup: https://developers.google.com/youtube/v3/getting-started
+ * - Documentation: https://developers.google.com/youtube/v3/docs/search/list
+ * 
+ * Example API call:
+ * GET https://www.googleapis.com/youtube/v3/search?part=snippet&q=nigeria+security&key=YOUR_API_KEY&maxResults=50&order=date&publishedAfter=2024-01-01T00:00:00Z
+ */
 const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
 
 // Security keywords for filtering videos

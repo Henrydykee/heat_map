@@ -1,17 +1,33 @@
 .share-button,
 .share-button-icon {
-  background: #f3f4f6;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
-  font-weight: 500;
-  color: #1a1a1a;
+  font-weight: 600;
+  color: #374151;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.share-button::before,
+.share-button-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
 }
 
 .dark-mode .share-button,
@@ -22,19 +38,58 @@
 }
 
 .share-button-icon {
-  padding: 0.375rem 0.5rem;
-  font-size: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 1.125rem;
+  min-width: 2.5rem;
+  justify-content: center;
 }
 
 .share-button:hover,
 .share-button-icon:hover {
-  background: #e5e7eb;
+  background: #f3f4f6;
   border-color: #dc2626;
-  transform: translateY(-1px);
+  color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.share-button:hover::before,
+.share-button-icon:hover::before {
+  width: 200px;
+  height: 200px;
 }
 
 .dark-mode .share-button:hover,
 .dark-mode .share-button-icon:hover {
   background: #4b5563;
+  border-color: #dc2626;
+  color: #f9fafb;
 }
 
+.share-button:active,
+.share-button-icon:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.1);
+}
+
+.share-button-icon span,
+.share-button-icon {
+  transition: transform var(--transition-fast) ease;
+}
+
+.share-button-icon:hover span,
+.share-button-icon:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}

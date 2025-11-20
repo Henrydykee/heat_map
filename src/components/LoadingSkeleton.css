@@ -1,10 +1,11 @@
 .skeleton-article,
 .skeleton-video {
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e5e7eb;
-  animation: pulse 1.5s ease-in-out infinite;
+  animation: pulse 1.5s ease-in-out infinite, fadeIn 0.4s ease-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .dark-mode .skeleton-article,
@@ -62,10 +63,11 @@
 
 .skeleton-stat {
   background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: 12px;
+  padding: 1.75rem;
   border: 1px solid #e5e7eb;
-  animation: pulse 1.5s ease-in-out infinite;
+  animation: pulse 1.5s ease-in-out infinite, fadeIn 0.4s ease-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .dark-mode .skeleton-stat {

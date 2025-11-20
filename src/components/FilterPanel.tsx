@@ -44,6 +44,7 @@ const FilterPanel = ({
         <button
           className="filter-toggle"
           onClick={() => setIsExpanded(!isExpanded)}
+          aria-expanded={isExpanded}
         >
           <span>🔍 Filters</span>
           {activeFilterCount > 0 && (
